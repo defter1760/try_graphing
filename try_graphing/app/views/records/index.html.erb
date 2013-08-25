@@ -1,0 +1,72 @@
+<h1>Listing records</h1>
+
+<table border=0>
+  <thead>
+    <tr>
+      <th>Revenue</th>
+      <th>Hits</th>
+      <th>Site</th>
+      <th>Source</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @records.each do |record| %>
+        <td><%= record.revenue %></td>
+        <td><%= record.hits %></td>
+        <td><%= record.site_id %></td>
+        <td><%= record.source_id %></td>
+        <td><%= record.date %></td>
+        <td><%= link_to 'Show', record %></td>
+        <td><%= link_to 'Edit', edit_record_path(record) %></td>
+        <td><%= link_to 'Destroy', record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <td height=12em>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>       
+    </tr>    
+    <tr>
+      <td>
+      <%= @totalrev %>
+      </td>
+      <td>
+      <%= @totalhits %>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>       
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br><br>
+<%= link_to 'New Record', new_record_path %>

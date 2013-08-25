@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Revenue:</strong>
+  <%= @record.revenue %>
+</p>
+
+<p>
+  <strong>Hits:</strong>
+  <%= @record.hits %>
+</p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @record.site_id %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @record.source_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @record.date %>
+</p>
+
+<%= link_to 'Edit', edit_record_path(@record) %> |
+<%= link_to 'Back', records_path %>
